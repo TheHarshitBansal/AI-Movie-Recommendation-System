@@ -2,7 +2,7 @@ import { Add, Remove } from "@mui/icons-material";
 
 const FAQCard = ({ num, question, ans, open, setOpen }) => {
   return (
-    <div className="max-w-[620px] max-h-[140px]">
+    <div className="max-w-full lg:max-w-[620px]">
       <div
         className={`flex p-6 gap-x-4 ${open ? "items-start" : "items-center"}`}
       >
@@ -10,8 +10,14 @@ const FAQCard = ({ num, question, ans, open, setOpen }) => {
           {num + 1}
         </span>
         <div className="space-y-3 w-[450px]">
-          <h1 className="text-white text-xl font-medium">{question}</h1>
-          <p className={`text-gray60 text-base ${open ? "visible" : "hidden"}`}>
+          <h1 className="text-white text-lg sm:text-xl font-medium">
+            {question}
+          </h1>
+          <p
+            className={`text-gray60 text-sm sm:text-base ${
+              open ? "visible" : "hidden"
+            }`}
+          >
             {ans}
           </p>
         </div>
@@ -24,8 +30,8 @@ const FAQCard = ({ num, question, ans, open, setOpen }) => {
       </div>
       <div
         className={`h-[1px] w-full bg-[linear-gradient(90deg,_rgba(229,_0,_0,_0)_0%,_rgba(229,_0,_0,_1)_17%,_rgba(229,_0,_0,_0)_100%)] ${
-          num == 4 || num == 9 ? "hidden" : "block"
-        }`}
+          num == 4 ? "lg:hidden" : "lg:block"
+        } ${num == 9 ? "!hidden" : "block"}`}
       ></div>
     </div>
   );

@@ -6,6 +6,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'sm': '480px', // Mobile
+      'md': '768px', // Tablet
+      'lg': '1024px', // Laptop
+      'xl': '1280px', // Desktop
+    },
     extend: {
       backgroundImage: {
         'faq-gradient': 'linear-gradient(0deg, rgba(229, 0, 0, 0) 0%, rgba(229, 0, 0, 1) 17%, rgba(229, 0, 0, 0) 100%)',

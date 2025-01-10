@@ -22,9 +22,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center relative">
       <div
-        className={`mx-auto fixed w-[90vw] overflow-y-visible max-h-20 top-0 py-4 z-[999] px-10 rounded-b-xl transition-all duration-300 ${
+        className={`mx-auto fixed w-[90vw] overflow-y-visible max-h-20 top-0 py-4 z-[999] md:px-10 px-5 rounded-b-xl transition-all duration-300 ${
           isScrolled
             ? "bg-black/70 backdrop-blur-xl shadow-2xl"
             : "bg-transparent"
@@ -32,7 +32,7 @@ const Header = () => {
       >
         <div className="flex justify-between items-start">
           <Link to={user ? "/browse" : "/"}>
-            <img src={Logo} alt="Logo" />
+            <img src={Logo} alt="Logo" className="w-24 md:w-32 lg:w-fit" />
           </Link>
           {user && (
             <div className="flex items-start gap-x-5">

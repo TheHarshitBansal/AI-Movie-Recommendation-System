@@ -48,7 +48,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="absolute -z-1 flex flex-wrap gap-2 h-screen overflow-clip">
+      <div className="absolute -z-1 flex flex-wrap gap-2 justify-around h-screen w-screen overflow-y-clip">
         {nowPlayingMovies &&
           nowPlayingMovies.map((movie) => (
             <Poster key={movie.id} url={movie.poster_path} width={150} />
@@ -59,15 +59,19 @@ const HomePage = () => {
           ))}
       </div>
       <div className="bg-black/85 h-screen w-screen absolute top-0 left-0 z-[1]"></div>
-      <div className="mx-20">
+      <div className="lg:mx-20 mx-5 md:mx-10">
         {/* //!Home Section */}
-        <div className="relative z-50 pt-40">
-          <div className="flex items-center justify-center py-20">
-            <img src={AbstractDesign} alt="Abstract" />
+        <div className="relative z-50 pt-10 lg:pt-40">
+          <div className="flex items-center justify-center py-10 md::py-20">
+            <img
+              src={AbstractDesign}
+              alt="Abstract"
+              className="w-32 md:w-fit"
+            />
           </div>
           <div className="flex flex-col gap-y-10 items-center">
             <div className="space-y-5 text-center px-20">
-              <h1 className="text-white font-bold text-5xl">
+              <h1 className="text-white font-bold text-4xl md:text-5xl">
                 The Best Experience
               </h1>
               <p className="text-gray60 text-sm">
@@ -80,7 +84,7 @@ const HomePage = () => {
               </p>
             </div>
             <button
-              className="text-white flex items-center justify-center text-sm font-semibold px-5 py-2 rounded-lg bg-red45 w-fit hover:bg-opacity-80"
+              className="text-white cursor-pointer flex items-center justify-center text-sm font-semibold px-5 py-2 rounded-lg bg-red45 w-fit hover:bg-opacity-80"
               onClick={() => {
                 user ? navigate("/browse") : navigate("/auth/signin");
               }}
@@ -94,8 +98,8 @@ const HomePage = () => {
         </div>
 
         {/* //!Features Section */}
-        <div className="mb-20 mt-60" id="features">
-          <div className="space-y-3 pe-40 mb-14">
+        <div className="mb-20 md:mt-60 mt-40" id="features">
+          <div className="space-y-3 pe-5 lg:pe-40 mb-14">
             <h1 className="text-3xl text-white font-bold">
               Discover the Features of StreamVibe
             </h1>
@@ -129,7 +133,7 @@ const HomePage = () => {
               to find answers to the most common questions about StreamVibe.
             </p>
           </div>
-          <div className="flex flex-col flex-wrap h-[550px] max-h-fit">
+          <div className="flex flex-col flex-wrap lg:h-[580px] h-full max-h-fit">
             {faq.map((item, index) => (
               <FAQCard
                 key={index}
@@ -144,7 +148,10 @@ const HomePage = () => {
         </div>
 
         {/* //! Contact Form Section */}
-        <div className="flex space-x-10 my-20" id="contact">
+        <div
+          className="flex flex-col lg:flex-row lg:space-x-10 my-20 lg:space-y-0 space-y-5"
+          id="contact"
+        >
           <div className="space-y-2">
             <div className="space-y-3">
               <h1 className="font-bold text-3xl text-white">Reach Us Out</h1>
@@ -153,8 +160,7 @@ const HomePage = () => {
                 with our product.
               </p>
             </div>
-            {/* //TODO Empty Div */}
-            <div className="max-w-[40vw] max-h-[55vh] overflow-clip rounded-lg border-[6px] border-black15 px-1 pt-3">
+            <div className="max-w-[40vw] max-h-[55vh] overflow-clip rounded-lg border-[6px] border-black15 px-1 pt-3 hidden lg:block">
               <div className="grid grid-cols-4 gap-x-10 gap-y-5 h-fit w-fit bg-gray50">
                 {popularMovies &&
                   popularMovies.map((movie) => (

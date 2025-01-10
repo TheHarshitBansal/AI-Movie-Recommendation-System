@@ -36,15 +36,15 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="text-white relative w-[800px]">
+    <div className="text-white relative lg:w-[800px]">
       <div className="bg-black6 border border-black15 p-10 rounded-xl">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="space-y-10"
           noValidate
         >
-          <div className="flex w-full gap-5">
-            <div className="flex flex-col w-1/2 space-y-3">
+          <div className="flex flex-col sm:flex-row w-full gap-5">
+            <div className="flex flex-col sm:w-1/2 space-y-3">
               <label htmlFor="firstName" className="font-semibold text-base">
                 First Name
               </label>
@@ -61,7 +61,7 @@ const ContactForm = () => {
                 </p>
               )}
             </div>
-            <div className="flex flex-col w-1/2 space-y-3">
+            <div className="flex flex-col sm:w-1/2 space-y-3">
               <label htmlFor="lastName" className="font-semibold text-base">
                 Last Name
               </label>
@@ -113,7 +113,7 @@ const ContactForm = () => {
               </p>
             )}
           </div>
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between">
             <div>
               <Checkbox
                 label="I agree with Terms of Use and Privacy Policy"

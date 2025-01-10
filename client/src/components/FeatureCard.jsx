@@ -1,6 +1,6 @@
 const FeatureCard = ({ heading, description, svg }) => {
   return (
-    <div className="relative p-10 w-[420px] bg-black6 rounded-xl">
+    <div className="relative p-10 lg:w-[420px] w-full bg-black6 rounded-xl">
       <div className="absolute top-0 left-0 w-full h-full rounded-xl bg-opacity-20 bg-[linear-gradient(215deg,_rgba(229,_0,_0,_0.1)_0%,_rgba(229,_0,_0,_0)_50%)]"></div>
       <div className="flex flex-col gap-y-5">
         {/* //!SVG and Heading */}
