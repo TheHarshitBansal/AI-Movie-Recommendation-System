@@ -60,23 +60,27 @@ const Profile = () => {
   return (
     <div>
       <Header />
-      <div className="flex flex-col justify-center mt-40 mx-20 text-white">
-        <div className="flex items-end space-x-5">
+      <div className="flex flex-col justify-center mt-28 md:mt-40 mx-5 md:mx-10 lg:mx-20 text-white">
+        <div className="flex items-end space-x-2 md:space-x-5">
           {user?.avatar?.secure_url ? (
             <img
               src={user.avatar.secure_url}
               alt={user.name}
-              className="w-60 h-60 hover:cursor-pointer rounded-lg"
+              className="lg:w-60 lg:h-60 md:w-40 md:h-40 w-32 h-32 hover:cursor-pointer rounded-lg"
             />
           ) : (
-            <div className="w-60 h-60 hover:cursor-pointer rounded-lg text-9xl bg-red45 text-center text-white font-semibold flex items-center justify-center uppercase">
+            <div className="lg:w-60 lg:h-60 md:w-40 md:h-40 w-32 h-32 hover:cursor-pointer rounded-lg text-2xl md:text-6xl lg:text-9xl bg-red45 text-center text-white font-semibold flex items-center justify-center uppercase">
               {user.name[0]}
             </div>
           )}
-          <div className="flex flex-col gap-y-2">
-            <h1 className="text-5xl font-bold">{user.name}</h1>
-            <h2 className="text-2xl text-gray60 font-semibold">{user.email}</h2>
-            <h3 className="text-xl font-medium bg-black20 border border-black15 w-fit p-2 rounded-lg">
+          <div className="flex flex-col md:gap-y-2">
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-bold">
+              {user.name}
+            </h1>
+            <h2 className="text-sm md:text-xl lg:text-2xl text-gray60 font-semibold">
+              {user.email}
+            </h2>
+            <h3 className="text-xs md:text-lg lg:text-xl font-medium bg-black20 border border-black15 w-fit p-2 rounded-lg">
               Subscription Status :{" "}
               <span
                 className={`${
@@ -89,29 +93,29 @@ const Profile = () => {
           </div>
         </div>
         {/* //! Buttons */}
-        <div className="flex justify-start gap-x-10 my-10">
+        <div className="flex flex-col md:flex-row lg:gap-x-10 md:gap-x-5 gap-y-2 my-10 text-sm md:text-base lg:text-lg">
           <button
-            className="text-lg flex items-center gap-x-1 border border-red45 w-fit py-2 px-4 rounded-lg hover:bg-red45"
+            className="w-full md:w-fit flex items-center gap-x-1 border justify-center border-red45 py-2 px-4 rounded-lg hover:bg-red45"
             onClick={() => navigate("/profile/edit-profile")}
           >
             Edit Profile <EditIcon />
           </button>
           <button
-            className="text-lg flex items-center gap-x-1 border border-red45 w-fit py-2 px-4 rounded-lg hover:bg-red45"
+            className="w-full md:w-fit flex items-center justify-center gap-x-1 border border-red45 py-2 px-4 rounded-lg hover:bg-red45"
             onClick={() => navigate("/profile/change-password")}
           >
             Change Password <PasswordIcon />
           </button>
           {!user.subscription.status && (
             <button
-              className="text-lg flex items-center gap-x-1 border border-red45 w-fit py-2 px-4 rounded-lg hover:bg-red45"
+              className="w-full md:w-fit flex items-center justify-center gap-x-1 border border-red45 py-2 px-4 rounded-lg hover:bg-red45"
               onClick={handlePayment}
             >
               Get Subscription <CardMembershipIcon />
             </button>
           )}
           <button
-            className="text-lg flex items-center gap-x-1 bg-red55 border border-black15 w-fit py-2 px-4 rounded-lg hover:bg-red45"
+            className="w-full md:w-fit flex items-center justify-center gap-x-1 bg-red55 border border-black15 py-2 px-4 rounded-lg hover:bg-red45"
             onClick={() => setOpenModal(true)}
           >
             Delete Account <DeleteIcon />

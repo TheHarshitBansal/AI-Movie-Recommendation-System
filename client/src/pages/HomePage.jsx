@@ -98,7 +98,7 @@ const HomePage = () => {
         </div>
 
         {/* //!Features Section */}
-        <div className="mb-20 md:mt-60 mt-40" id="features">
+        <div className="mb-20 mt-60 lg:mt-80" id="features">
           <div className="space-y-3 pe-5 lg:pe-40 mb-14">
             <h1 className="text-3xl text-white font-bold">
               Discover the Features of StreamVibe
