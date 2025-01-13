@@ -21,8 +21,8 @@ const MovieContainer = () => {
     }
   }, [location]);
   return (
-    <div className="relative mx-20 px-10 border border-black15 rounded-xl">
-      <button className="absolute -top-5 text-white flex items-center justify-center text-sm font-semibold px-5 py-3 rounded-md bg-red45 w-fit hover:bg-opacity-80 disabled:bg-opacity-50">
+    <div className="relative mx-5 md:mx-10 lg:mx-20 px-2 md:px-5 lg:px-10 border border-black15 rounded-xl">
+      <button className="absolute -top-5 text-white flex items-center justify-center text-xs md:text-sm font-semibold md:px-5 md:py-3 px-3 py-2 rounded-md bg-red45 w-fit hover:bg-opacity-80 disabled:bg-opacity-50">
         Movies
       </button>
       <PlayingNowMovies />

@@ -18,16 +18,16 @@ const PaginationButtons = ({ hook, next, page, nextPage, prevPage }) => {
   };
 
   return (
-    <div className="rounded-xl p-3 flex gap-x-2 items-center">
+    <div className="rounded-xl p-1 md:p-3 flex gap-x-1 md:gap-x-2 items-center">
       <button
         disabled={page === 1}
-        className="bg-black6 border border-black12 rounded-md p-2 hover:bg-black10 disabled:bg-gray-950"
+        className="bg-black6 border border-black12 rounded-md p-1 md:p-2 hover:bg-black10 disabled:bg-gray-950"
         onClick={handlePrevPage}
       >
         <KeyboardDoubleArrowLeftRoundedIcon fontSize="medium" />
       </button>
       <button
-        className="bg-black6 border border-black12 rounded-md p-2 hover:bg-black10 disabled:bg-gray-950"
+        className="bg-black6 border border-black12 rounded-md p-1 md:p-2 hover:bg-black10 disabled:bg-gray-950"
         onClick={handleNextPage}
         disabled={!next}
       >

@@ -15,9 +15,11 @@ const PlayingNowMovies = () => {
   );
   if (!playingNowMovies) return null;
   return (
-    <div className="w-full pt-10" id="playingNowMovies">
+    <div className="w-full pt-5 lg:pt-10" id="playingNowMovies">
       <div className="flex items-center justify-between">
-        <h1 className="font-bold text-3xl">Playing Now Movies</h1>
+        <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
+          Playing Now Movies
+        </h1>
         <PaginationButtons
           hook={getNowPlayingMovies}
           next={playingNowMovies.length !== 0 ? true : false}
@@ -26,7 +28,7 @@ const PlayingNowMovies = () => {
           prevPage={decrementPlayingNowMovies}
         />
       </div>
-      <div className=" mt-10 flex gap-x-5 overflow-scroll no-scrollbar">
+      <div className=" mt-5 flex gap-x-2 md:gap-x-3 lg:gap-x-5 overflow-scroll no-scrollbar">
         {playingNowMovies.map((movie) => (
           <PosterCards key={movie.id} id={movie.id} />
         ))}

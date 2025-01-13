@@ -14,9 +14,11 @@ const PopularMovies = () => {
   if (!popularMovies) return null;
 
   return (
-    <div className="w-full pt-10" id="popularMovies">
+    <div className="w-full pt-5 lg:pt-10" id="popularMovies">
       <div className="flex items-center justify-between">
-        <h1 className="font-bold text-3xl">Popular Movies</h1>
+        <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
+          Popular Movies
+        </h1>
         <PaginationButtons
           hook={getPopularMovies}
           next={popularMovies.length !== 0 ? true : false}
@@ -25,7 +27,7 @@ const PopularMovies = () => {
           prevPage={decrementPopularMovies}
         />
       </div>
-      <div className=" mt-10 flex gap-x-5 overflow-scroll no-scrollbar">
+      <div className="mt-5 flex gap-x-2 md:gap-x-3 lg:gap-x-5 overflow-scroll no-scrollbar">
         {popularMovies.map((movie) => (
           <PosterCards key={movie.id} id={movie.id} />
         ))}
