@@ -35,7 +35,7 @@ const EpisodeCards = ({ episode }) => {
           </h1>
           <span className="flex items-center gap-x-1 bg-black8 border border-black15 p-1 rounded-md !text-xs md:!text-sm font-medium text-gray60">
             <AccessTimeIcon fontSize="small" />
-            {episode.runtime} mins
+            {episode.runtime}mins
           </span>
         </div>
         <p className="font-normal text-xs md:text-sm lg:text-base text-gray60">
