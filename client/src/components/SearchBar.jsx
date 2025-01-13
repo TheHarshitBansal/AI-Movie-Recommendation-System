@@ -80,21 +80,28 @@ const SearchBar = ({ isBasicSearch }) => {
       ref={searchRef}
       className={`relative text-gray60 flex flex-col gap-y-3 ${
         isOpen
-          ? "bg-black10 border border-black15 rounded-lg p-2 max-w-96"
+          ? "bg-black10 border border-black15 rounded-lg p-2 max-w-52 md:max-w-72 lg:max-w-96"
           : "mt-2"
       }`}
     >
       {/* Search Bar */}
       <div className="flex items-center gap-x-3">
         {isBasicSearch ? (
-          <SearchIcon
-            fontSize="medium"
-            className="cursor-pointer"
-            onClick={() => setIsOpen(!isOpen)}
-          />
+          <>
+            <SearchIcon
+              fontSize="medium"
+              className="!hidden md:!block cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
+            <SearchIcon
+              fontSize="small"
+              className="md:!hidden cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            />
+          </>
         ) : (
           <RiGeminiLine
-            className="text-2xl cursor-pointer"
+            className="text-lg md:text-2xl cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           />
         )}
@@ -104,12 +111,15 @@ const SearchBar = ({ isBasicSearch }) => {
           placeholder={isBasicSearch ? "Search Here" : "AI Search"}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className={`bg-transparent outline-none ${
+          className={`bg-transparent outline-none text-xs md:text-base ${
             isOpen ? "w-96" : "w-0"
           } transition-all`}
         />
         {isOpen && !isBasicSearch && (
-          <button className="w-fit" onClick={handleGPTSearch}>
+          <button
+            className="text-xs md:text-base w-fit"
+            onClick={handleGPTSearch}
+          >
             Search
           </button>
         )}

@@ -12,7 +12,7 @@ const ToggleSearch = ({ isBasicSearch, setIsBasicSearch }) => {
   }, [isBasicSearch, dispatch]);
   return (
     <div
-      className={`text-gray60 text-xl flex cursor-pointer h-10 w-20 bg-black10 border border-black15 gap-x-1 p-1 rounded-lg items-center`}
+      className={`text-gray60 text-lg md:text-xl flex cursor-pointer h-8 w-16 md:h-10 md:w-20 bg-black10 border border-black15 gap-x-1 p-1 rounded-lg items-center`}
       onClick={() => setIsBasicSearch(!isBasicSearch)}
     >
       <div
@@ -21,7 +21,7 @@ const ToggleSearch = ({ isBasicSearch, setIsBasicSearch }) => {
         }`}
       >
         <span
-          className={`flex items-center p-2 rounded-lg ${
+          className={`flex items-center p-1 md:p-2 rounded-lg ${
             isBasicSearch ? "block" : "hidden"
           }`}
         >
@@ -29,7 +29,7 @@ const ToggleSearch = ({ isBasicSearch, setIsBasicSearch }) => {
         </span>
 
         <span
-          className={`flex items-center p-2 rounded-lg ${
+          className={`flex items-center p-1 md:p-2 rounded-lg ${
             isBasicSearch ? "hidden" : "block"
           }`}
         >

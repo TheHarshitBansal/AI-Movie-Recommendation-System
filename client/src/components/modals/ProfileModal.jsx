@@ -33,17 +33,17 @@ const ProfileModal = ({ setIsProfileModalOpen }) => {
 
   return (
     <div
-      className="w-40 text-white h-fit bg-black flex flex-col absolute top-12 shadow-2xl rounded-xl"
+      className="w-28 md:w-36 lg:w-40 text-white h-fit bg-black flex flex-col absolute top-12 shadow-2xl rounded-xl"
       ref={profileRef}
     >
       <button
-        className="bg-black12 w-full p-2 hover:bg-red60"
+        className="bg-black12 text-sm lg:text-base w-full p-2 hover:bg-red60"
         onClick={() => navigate("/profile")}
       >
         My Profile
       </button>
       <button
-        className="bg-black12 w-full p-2 hover:bg-red60"
+        className="bg-black12 text-sm lg:text-base w-full p-2 hover:bg-red60"
         onClick={handleLogout}
       >
         Logout

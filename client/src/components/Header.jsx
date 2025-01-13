@@ -48,12 +48,12 @@ const Header = () => {
                   <img
                     src={user.avatar.secure_url}
                     alt={user.name}
-                    className="w-10 h-10 hover:cursor-pointer rounded-full"
+                    className="w-8 h-8 md:w-10 md:h-10 hover:cursor-pointer rounded-full"
                     onClick={() => setIsProfileModalOpen(!isProfileModalOpen)}
                   />
                 ) : (
                   <div
-                    className="w-10 h-10 text-xl hover:cursor-pointer rounded-full bg-red45 text-center text-white font-semibold flex items-center justify-center uppercase"
+                    className="w-8 h-8 md:w-10 md:h-10 text-base md:text-xl hover:cursor-pointer rounded-full bg-red45 text-center text-white font-semibold flex items-center justify-center uppercase"
                     onClick={() => setIsProfileModalOpen(!isProfileModalOpen)}
                   >
                     {user.name[0]}
