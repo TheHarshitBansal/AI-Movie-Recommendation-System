@@ -142,7 +142,7 @@ const SignIn = () => {
               Forgot Password?
             </Link>
             <span className="text-[#b8b7b7] text-base">
-              New to BingeBot?{" "}
+              New to StreamVibe?{" "}
               <Link
                 to="/auth/signup"
                 className="text-white hover:text-gray-300 hover:underline"
