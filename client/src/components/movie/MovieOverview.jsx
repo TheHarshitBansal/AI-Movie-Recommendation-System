@@ -4,7 +4,9 @@ const MovieOverview = ({ desc }) => {
       <h3 className="font-medium text-gray60 text-sm md:text-base lg:text-lg">
         Overview
       </h3>
-      <p className="font-medium text-xs md:text-sm lg:text-base">{desc}</p>
+      <p className="font-medium text-xs md:text-sm lg:text-base max-h-[50vh] overflow-y-scroll no-scrollbar">
+        {desc}
+      </p>
     </div>
   );
 };

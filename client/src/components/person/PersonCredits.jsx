@@ -7,11 +7,11 @@ const PersonCredits = ({ id, show = false }) => {
   if (!credits) return null;
 
   return (
-    <div className="p-10 flex flex-col gap-y-3 bg-black10 border border-black15 rounded-xl">
-      <h1 className="font-medium text-gray60 text-lg">
+    <div className="p-5 lg:p-10 flex flex-col gap-y-2 md:gap-y-3 bg-black10 border border-black15 rounded-xl">
+      <h1 className="font-medium text-gray60 text-sm md:text-base lg:text-lg">
         Featured {show ? "Shows" : "Movies"}
       </h1>
-      <div className="flex gap-x-5 overflow-scroll no-scrollbar">
+      <div className="flex gap-x-2 md:gap-x-3 lg:gap-x-5 overflow-scroll no-scrollbar">
         {credits.map((movie) =>
           !show ? (
             <PosterCards key={movie.id} id={movie.id} />
