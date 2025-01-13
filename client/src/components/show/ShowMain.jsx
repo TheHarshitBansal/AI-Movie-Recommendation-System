@@ -3,7 +3,7 @@ import MovieDetailsVideoBackground from "../movie/MovieDetailsVideoBackground.js
 
 const ShowMain = ({ show }) => {
   return (
-    <div className="relative mt-20">
+    <div className="relative mt-10">
       <VideoTitle title={show.name} overview={show.overview} />
       <MovieDetailsVideoBackground id={show.id} show />
     </div>

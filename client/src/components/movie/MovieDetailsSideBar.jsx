@@ -10,7 +10,7 @@ const MovieDetailsSideBar = ({ movie, show }) => {
   const streamingPlatforms = useMovieWatchProviders({ id, show });
 
   return (
-    <div className="p-10 flex flex-col gap-y-3 md:gap-y-5 lg:gap-y-8 bg-black10 border border-black15 rounded-xl h-full">
+    <div className="p-5 md:p-10 flex flex-col items-start justify-start gap-y-3 md:gap-y-5 lg:gap-y-8 bg-black10 border border-black15 rounded-xl h-full">
       {/* //! Release Date */}
       <div className="flex flex-col gap-y-2 md:gap-y-3">
         <div className="text-gray60 font-medium text-sm md:text-base lg:text-lg flex items-center gap-x-1 md:gap-x-2">

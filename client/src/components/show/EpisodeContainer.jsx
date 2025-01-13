@@ -13,19 +13,35 @@ const EpisodeContainer = ({ name, ep, number }) => {
   console.log(epDetails);
 
   return (
-    <div className="px-10 py-5 bg-black6 rounded-xl border border-black15 flex flex-col gap-y-10">
+    <div className="px-6 md:px-8 py-3 lg:px-10 lg:py-5 bg-black6 rounded-xl border border-black15 flex flex-col gap-y-4 md:gap-y-6 lg:gap-y-10">
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-x-4">
-          <h1 className="font-semibold text-xl">{name}</h1>
-          <span className="text-gray60 font-medium text-base">
+        <div className="flex items-center gap-x-2 lg:gap-x-4">
+          <h1 className="font-semibold text-sm md:text-base lg:text-lg">
+            {name}
+          </h1>
+          <span className="text-gray60 font-medium text-xs md:text-sm lg:text-base">
             {ep} Episodes
           </span>
         </div>
         <button onClick={() => setShowEpisodes(!showEpisodes)}>
           {showEpisodes ? (
-            <ExpandLessIcon fontSize="large" />
+            <>
+              <ExpandLessIcon fontSize="small" className="md:!hidden" />
+              <ExpandLessIcon
+                fontSize="medium"
+                className="!hidden md:!block lg:!hidden"
+              />
+              <ExpandLessIcon fontSize="large" className="!hidden lg:!block" />
+            </>
           ) : (
-            <ExpandMoreIcon fontSize="large" />
+            <>
+              <ExpandMoreIcon fontSize="small" className="md:!hidden" />
+              <ExpandMoreIcon
+                fontSize="medium"
+                className="!hidden md:!block lg:!hidden"
+              />
+              <ExpandMoreIcon fontSize="large" className="!hidden lg:!block" />
+            </>
           )}
         </button>
       </div>

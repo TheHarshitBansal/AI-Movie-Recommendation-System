@@ -17,7 +17,7 @@ const ShowDetails = () => {
   return (
     <div className="relative text-white w-full h-full">
       <Header />
-      <div className="relative mx-20">
+      <div className="relative mx-5 md:mx-10 lg:mx-20">
         <ShowMain show={show} />
         <MovieSecondary movie={show} show />
       </div>
