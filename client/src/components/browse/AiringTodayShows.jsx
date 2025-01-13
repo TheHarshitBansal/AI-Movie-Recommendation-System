@@ -14,9 +14,11 @@ const AiringTodayShows = () => {
   if (!airingToday) return null;
 
   return (
-    <div className="w-full py-10" id="airingTodayShows">
+    <div className="w-full py-5 lg:py-10" id="airingTodayShows">
       <div className="flex items-center justify-between">
-        <h1 className="font-bold text-3xl">Airing Today Shows</h1>
+        <h1 className="font-bold text-xl md:text-2xl lg:text-3xl">
+          Airing Today Shows
+        </h1>
         <PaginationButtons
           hook={getAiringTodayShows}
           next={airingToday.length !== 0 ? true : false}
@@ -25,7 +27,7 @@ const AiringTodayShows = () => {
           prevPage={decrementAiringTodayShows}
         />
       </div>
-      <div className=" mt-10 flex gap-x-5 overflow-scroll no-scrollbar">
+      <div className="mt-5 flex gap-x-2 md:gap-x-3 lg:gap-x-5 overflow-scroll no-scrollbar">
         {airingToday.map((show) => (
           <ShowCards key={show.id} id={show.id} />
         ))}
