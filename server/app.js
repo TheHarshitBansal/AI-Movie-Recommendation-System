@@ -9,6 +9,7 @@ import morgan from 'morgan';
 import errorMiddleware from './middlewares/error.middleware.js';
 import connectionToDB from './config/dbConnection.js';
 import { getResults } from './controllers/ai.controller.js';
+import { contact } from './controllers/miscellaneous.controller.js';
 dotenv.config();
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -16,16 +17,19 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const corsOptions = {
-    origin: process.env.FRONTEND_URL, // Replace with your frontend URL
-    credentials: true, // Allow credentials
+    origin: process.env.FRONTEND_URL,
+    credentials:true,
   };
 app.use(cors(corsOptions));
 app.use(cookieParser());
-app.use(morgan('dev'));
+app.use(morgan('combined'));
+
+app.options("*", cors());
 
 app.use('/api/user', userRoutes)
 app.use('/api/payment', paymentRoutes)
 app.post('/api/searchAI', getResults)
+app.post('/api/contact', contact)
 
 app.all('*', (req,res)=>{
     res.status(404).send("Page not found")

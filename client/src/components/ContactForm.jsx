@@ -2,6 +2,8 @@ import { Checkbox } from "@mui/joy";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
+import axiosInstance from "../services/axios.js";
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const schema = yup
@@ -31,8 +33,13 @@ const ContactForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await axiosInstance.post("/contact", data);
+      toast.success(response?.data?.message);
+    } catch (error) {
+      toast.error(error?.response?.data?.message);
+    }
   };
 
   return (
