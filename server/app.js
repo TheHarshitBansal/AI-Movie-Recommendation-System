@@ -17,7 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 const corsOptions = {
-    origin: process.env.FRONTEND_URL,
+    origin: "https://streamvibe12.vercel.app",
     credentials:true,
   };
 app.use(cors(corsOptions));
