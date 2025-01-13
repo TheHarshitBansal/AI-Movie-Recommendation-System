@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar.jsx";
 import ProfileModal from "./modals/ProfileModal.jsx";
-import ToggleSearch from "./toggleSearch.jsx";
+import ToggleSearch from "./ToggleSearch.jsx";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
