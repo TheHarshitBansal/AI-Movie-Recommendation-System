@@ -6,7 +6,7 @@ const MovieDetailsVideoBackground = ({ id, show }) => {
   return (
     <div className="z-[99]">
       <iframe
-        className="relative w-[calc(100vw-160px)] h-[90vh] rounded-xl"
+        className="relative w-[calc(100vw-40px)] md:w-[calc(100vw-80px)] lg:w-[calc(100vw-160px)] h-[90vh] rounded-xl"
         width="560"
         height="315"
         src={`https://www.youtube.com/embed/${trailerId}?autoplay=1&mute=1&controls=0&rel=0&showinfo=0&modestbranding=1&iv_load_policy=3&playlist=${trailerId}&loop=1`}

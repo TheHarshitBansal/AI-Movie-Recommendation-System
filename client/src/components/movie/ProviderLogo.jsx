@@ -8,11 +8,11 @@ const ProviderLogo = ({ name, profile }) => {
   const imgUrl = IMAGE_URL + profile;
 
   return (
-    <div className="bg-black8 rounded-xl h-[50px] min-w-[50px]">
+    <div className="bg-black8 rounded-xl h-[30px] min-w-[30px] md:h-[40px] md:min-w-[40px] lg:h-[50px] lg:min-w-[50px]">
       <img
         src={imgUrl}
         alt={name}
-        className="object-cover w-[50px] h-[50px] rounded-lg"
+        className="object-cover h-[30px] min-w-[30px] md:h-[40px] md:min-w-[40px] lg:h-[50px] lg:min-w-[50px] rounded-lg"
       />
     </div>
   );

@@ -12,13 +12,13 @@ const CastProfileCard = ({ name, profile, id }) => {
 
   return (
     <div
-      className="bg-black8 rounded-xl h-[100px] min-w-[100px] hover:cursor-pointer"
+      className="bg-black8 rounded-xl h-[40px] min-w-[40px] md:h-[60px] md:min-w-[60px] lg:h-[100px] lg:min-w-[100px] hover:cursor-pointer"
       onClick={() => navigate(`/person/${id}`)}
     >
       <img
         src={imgUrl}
         alt={name}
-        className="object-cover w-[100px] h-[100px] rounded-xl"
+        className="object-cover h-[40px] min-w-[40px] md:h-[60px] md:min-w-[60px] lg:h-[100px] lg:min-w-[100px] rounded-xl"
       />
     </div>
   );

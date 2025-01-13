@@ -10,9 +10,11 @@ const MovieCast = ({ id, show }) => {
 
   const cast = credits.cast;
   return (
-    <div className="p-10 flex flex-col gap-y-3 bg-black10 border border-black15 rounded-xl">
-      <h3 className="font-medium text-gray60 text-lg">Cast</h3>
-      <div className="flex gap-x-5 overflow-scroll no-scrollbar">
+    <div className="p-5 lg:p-10 flex flex-col gap-y-2 md:gap-y-3 bg-black10 border border-black15 rounded-xl">
+      <h3 className="font-medium text-gray60 text-sm md:text-base lg:text-lg">
+        Cast
+      </h3>
+      <div className="flex gap-x-2 md:gap-x-3 lg:gap-x-5 overflow-scroll no-scrollbar">
         {cast.map((actor) => (
           <CastProfileCard
             key={actor.id}
