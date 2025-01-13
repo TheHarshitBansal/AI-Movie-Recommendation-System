@@ -4,7 +4,6 @@ import FAQCard from "../components/FAQCard.jsx";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import faq from "../data/FAQ.js";
-import features from "../data/features.js";
 import FeatureCard from "../components/FeatureCard.jsx";
 import AbstractDesign from "../assets/AbstractDesign.png";
 import PlayArrowRoundedIcon from "@mui/icons-material/PlayArrowRounded";
@@ -13,6 +12,51 @@ import { useSelector } from "react-redux";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies.js";
 import Poster from "../components/movie/Poster.jsx";
 import usePopularMovies from "../hooks/usePopularMovies.js";
+import thumbsUp from "../assets/features/thumbsUp.svg";
+import info from "../assets/features/info.svg";
+import trending from "../assets/features/trending.svg";
+import devices from "../assets/features/devices.svg";
+import interfaceSVG from "../assets/features/interface.svg";
+import prohibited from "../assets/features/prohibited.svg";
+
+const features = [
+  {
+    heading: "Top Recommendations",
+    description:
+      "StreamVibe brings you a carefully curated list of the most highly-rated movies and shows. Discover hidden gems and trending titles that you won’t find anywhere else.",
+    svg: thumbsUp,
+  },
+  {
+    heading: "In-Depth Information",
+    description:
+      "From plot summaries and cast details to viewer reviews and ratings, StreamVibe provides a comprehensive overview of every title.",
+    svg: info,
+  },
+  {
+    heading: "Trending Highlights",
+    description:
+      "Stay with the hottest trends in entertainment. Whether it’s the latest buzzworthy release or a show that’s gone viral, StreamVibe ensures you’re always ahead of the curve.",
+    svg: trending,
+  },
+  {
+    heading: "Seamless Integration",
+    description:
+      "StreamVibe is available on all your devices. Whether you are on your laptop, tablet, or smartphone, you can enjoy a seamless experience across all platforms.",
+    svg: devices,
+  },
+  {
+    heading: "User-Friendly Interface",
+    description:
+      "Our clean and intuitive interface makes it easy to find the movies and shows you love. Here you can spend less time searching and more time watching your favorite content.",
+    svg: interfaceSVG,
+  },
+  {
+    heading: "No Ads or Subscriptions",
+    description:
+      "StreamVibe is entirely free to use, with no subscription fees or intrusive ads. Enjoy a seamless browsing experience while exploring the best in entertainment.",
+    svg: prohibited,
+  },
+];
 
 const HomePage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
