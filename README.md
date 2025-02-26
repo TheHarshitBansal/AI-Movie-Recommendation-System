@@ -73,6 +73,6 @@ Feel free to contribute to this project by:
   2. Creating a new branch for your feature or bug fix.
   3. Submitting a pull request.
 
-**Let’s revolutionize how we explore and enjoy movies!** 🎥✨
+**Let’s revolutionize how we explore and enjoy movies!** 🎥
 
 
