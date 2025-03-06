@@ -1,5 +1,7 @@
 # AI Movie Recommendation System  
 
+![StreamVibe Logo](https://res.cloudinary.com/dtlpxg7ar/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1741244235/Vector_xo31gl.png)
+
 Welcome to the **AI Movie Recommendation System**! This project is a feature-rich movie database platform that integrates advanced technologies to provide users with personalized movie recommendations, detailed information, and an exceptional user experience.  
 
 ## Features  
