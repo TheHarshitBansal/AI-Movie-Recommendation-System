@@ -7,7 +7,7 @@ const usePersonImages = (id) => {
   const getPersonImages = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/person/${id}/images`,
+        `https://streamvibe.harshitbansal1201.workers.dev/person/${id}/images`,
         API_OPTIONS
       );
       const data = await response.json();
@@ -22,7 +22,7 @@ const usePersonImages = (id) => {
 
   useEffect(() => {
     if (id) {
-        getPersonImages();
+      getPersonImages();
     }
   }, [id]);
 

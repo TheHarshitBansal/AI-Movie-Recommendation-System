@@ -6,7 +6,7 @@ import { Skeleton } from "primereact/skeleton";
 
 const MainContainer = () => {
   const movies = useSelector((state) => state.movie?.nowPlaying);
-  const mainMovie = movies[Math.floor(Math.random() * movies.length)];
+  const mainMovie = movies[Math.floor(Math.random() * movies?.length)];
 
   if (mainMovie === undefined) {
     return <Skeleton className="w-full h-full"></Skeleton>;

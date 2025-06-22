@@ -10,7 +10,7 @@ const useNowPlayingMovies = () => {
     async (page = 1) => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/now_playing?region=IN&page=${page}`,
+          `https://streamvibe.harshitbansal1201.workers.dev/movie/now_playing?region=IN&page=${page}`,
           API_OPTIONS
         );
         const data = await response.json();
@@ -23,6 +23,6 @@ const useNowPlayingMovies = () => {
   );
 
   return { getNowPlayingMovies };
-}
+};
 
 export default useNowPlayingMovies;

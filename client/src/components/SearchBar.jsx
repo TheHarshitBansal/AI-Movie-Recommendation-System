@@ -47,7 +47,7 @@ const SearchBar = ({ isBasicSearch }) => {
   const fetchSearchResults = async (query) => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/search/multi?query=${query}`,
+        `https://streamvibe.harshitbansal1201.workers.dev/search/multi?query=${query}`,
         API_OPTIONS
       );
       const data = await response.json();
@@ -64,7 +64,7 @@ const SearchBar = ({ isBasicSearch }) => {
       const array = response.data;
       array.forEach(async (element) => {
         const res = await fetch(
-          `https://api.themoviedb.org/3/search/multi?query=${element}`,
+          `https://streamvibe.harshitbansal1201.workers.dev/search/multi?query=${element}`,
           API_OPTIONS
         );
         const data = await res.json();

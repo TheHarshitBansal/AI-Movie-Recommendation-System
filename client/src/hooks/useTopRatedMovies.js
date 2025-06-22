@@ -10,13 +10,12 @@ const useTopRatedMovies = () => {
     async (page = 1) => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/top_rated?region=IN&page=${page}`,
+          `https://streamvibe.harshitbansal1201.workers.dev/movie/top_rated?region=IN&page=${page}`,
           API_OPTIONS
         );
         const data = await response.json();
-        
+
         dispatch(addTopRatedMovies(data.results));
-        
       } catch (error) {
         console.error("Failed to fetch now-playing movies:", error);
       }
@@ -25,6 +24,6 @@ const useTopRatedMovies = () => {
   );
 
   return { getTopRatedMovies };
-}
+};
 
 export default useTopRatedMovies;

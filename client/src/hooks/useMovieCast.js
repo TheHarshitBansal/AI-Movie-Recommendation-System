@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants.js";
 
-const useMovieCast = ({id, show}) => {
+const useMovieCast = ({ id, show }) => {
   const [movieCast, setMovieCast] = useState(null);
 
   const getMovieCast = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/${show?'tv':'movie'}/${id}/credits`,
+        `https://streamvibe.harshitbansal1201.workers.dev/${
+          show ? "tv" : "movie"
+        }/${id}/credits`,
         API_OPTIONS
       );
       const data = await response.json();
@@ -22,7 +24,7 @@ const useMovieCast = ({id, show}) => {
 
   useEffect(() => {
     if (id) {
-        getMovieCast();
+      getMovieCast();
     }
   }, [id]);
 

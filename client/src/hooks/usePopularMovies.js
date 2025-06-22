@@ -10,13 +10,11 @@ const usePopularMovies = () => {
     async (page = 1) => {
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?region=IN&page=${page}`,
+          `https://streamvibe.harshitbansal1201.workers.dev/movie/popular?region=IN&page=${page}`,
           API_OPTIONS
         );
         const data = await response.json();
-       
-          dispatch(addPopularMovies(data.results));
-     
+        dispatch(addPopularMovies(data.results));
       } catch (error) {
         console.error("Failed to fetch now-playing movies:", error);
       }
@@ -25,6 +23,6 @@ const usePopularMovies = () => {
   );
 
   return { getPopularMovies };
-}
+};
 
 export default usePopularMovies;

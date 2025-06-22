@@ -7,7 +7,7 @@ const useMovieDetails = (id) => {
   const getMovieDetails = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}`,
+        `https://streamvibe.harshitbansal1201.workers.dev/movie/${id}`,
         API_OPTIONS
       );
       const data = await response.json();

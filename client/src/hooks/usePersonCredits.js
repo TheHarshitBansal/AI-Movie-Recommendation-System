@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants.js";
 
-const usePersonCredits = ({id, show}) => {
+const usePersonCredits = ({ id, show }) => {
   const [personCredits, setPersonCredits] = useState(null);
 
   const getPersonCredits = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/person/${id}/${show ? 'tv' : 'movie'}_credits`,
+        `https://streamvibe.harshitbansal1201.workers.dev/person/${id}/${
+          show ? "tv" : "movie"
+        }_credits`,
         API_OPTIONS
       );
       const data = await response.json();
@@ -22,7 +24,7 @@ const usePersonCredits = ({id, show}) => {
 
   useEffect(() => {
     if (id) {
-        getPersonCredits();
+      getPersonCredits();
     }
   }, [id]);
 

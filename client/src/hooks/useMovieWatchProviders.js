@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { API_OPTIONS } from "../utils/constants.js";
 
-const useMovieWatchProviders = ({id, show}) => {
+const useMovieWatchProviders = ({ id, show }) => {
   const [movieWatchProviders, setMovieWatchProviders] = useState(null);
 
   const getMovieWatchProviders = async () => {
     try {
       const response = await fetch(
-        `https://api.themoviedb.org/3/${show?'tv':'movie'}/${id}/watch/providers`,
+        `https://streamvibe.harshitbansal1201.workers.dev/${
+          show ? "tv" : "movie"
+        }/${id}/watch/providers`,
         API_OPTIONS
       );
       const data = await response.json();
@@ -22,7 +24,7 @@ const useMovieWatchProviders = ({id, show}) => {
 
   useEffect(() => {
     if (id) {
-        getMovieWatchProviders();
+      getMovieWatchProviders();
     }
   }, [id]);
 
