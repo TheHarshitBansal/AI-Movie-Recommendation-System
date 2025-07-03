@@ -1,78 +1,76 @@
-# AI Movie Recommendation System  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheHarshitBansal/AI-Movie-Recommendation-System/main/client/src/assets/Logo.svg" alt="AI Movie Recommendation System Logo" width="120" />
+</p>
 
-Welcome to the **AI Movie Recommendation System**! This project is a feature-rich movie database platform that integrates advanced technologies to provide users with personalized movie recommendations, detailed information, and an exceptional user experience.  
+<h1 align="center">🎬 AI Movie Recommendation System</h1>
 
-## Features  
+<p align="center">
+  <b>Your AI-powered movie explorer — search, discover, and enjoy personalized recommendations!</b><br/>
+  Advanced search, payments, JWT-auth, and sleek UI all bundled into one seamless experience.
+</p>
 
-### 1. **AI-Powered Search**
-   - Integrated **Google Gemini API** for an intelligent, conversational search experience.  
-   - Users can ask questions or search for movies and shows in a natural, human-like way.  
+<p align="center">
+  <a href="https://your-demo-url.vercel.app">🌐 Live Demo</a> •
+  <a href="https://github.com/TheHarshitBansal/AI-Movie-Recommendation-System/issues">🐛 Report Bug</a> •
+  <a href="mailto:harshitbansal.contact@gmail.com">📬 Contact</a>
+</p>
 
-### 2. **Payment Gateway**
-   - **Razorpay** integrated to manage payments seamlessly.  
-   - Secure and efficient payment flows for subscription models or premium features.  
-
-### 3. **User Authentication**
-   - Authentication powered by **JWT (JSON Web Tokens)** for secure user login and data access.  
-   - Protects sensitive user data and ensures a smooth login experience.  
-
-### 4. **State Management**
-   - **Redux** is used to manage the application state effectively.  
-   - Ensures scalable and maintainable code with global state handling.  
-
-### 5. **Responsive and Sleek Design**
-   - Fully responsive UI optimized for mobile, tablet, and desktop screens.  
-   - Clean and modern interface to enhance user experience.  
-
-### 6. **Rich Movie Database**
-   - Displays detailed information about movies and shows, including:  
-      - Cast and crew.  
-      - Release date.  
-      - Genre.  
-      - Ratings and reviews.  
-
-### 7. **Authentication APIs**  
-   - Backend APIs deployed on **Vercel** for efficient and scalable performance.  
-   - Handles user registration, login, and password reset securely.  
-
-### 8. **Frontend Deployment**  
-   - Frontend deployed on **Vercel**, ensuring high availability and performance.  
-
-### 9. **Local Development**
-   - Easily set up for local development using **Vite** for the frontend and **Express.js** for the backend.  
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/TheHarshitBansal/AI-Movie-Recommendation-System?style=plastic&color=green" />
+  <img src="https://img.shields.io/github/repo-size/TheHarshitBansal/AI-Movie-Recommendation-System?style=plastic&color=blue" />
+  <img src="https://img.shields.io/github/languages/top/TheHarshitBansal/AI-Movie-Recommendation-System?style=plastic" />
+  <img src="https://img.shields.io/github/license/TheHarshitBansal/AI-Movie-Recommendation-System?style=plastic" />
+  <img src="https://img.shields.io/badge/Hosted%20on-Vercel-black?logo=vercel&style=plastic" />
+</p>
 
 ---
 
-## Technologies Used  
+## 📷 Project Preview
 
-### Frontend  
-- **React**: For building a dynamic and interactive user interface.  
-- **Redux**: For state management.  
-- **TailwindCSS**: For responsive and modern styling.
-- **Figma**: For sleek and smooth UI. 
-
-### Backend  
-- **Node.js**: Handles backend functionality and API development.  
-- **Express.js**: Web framework for creating RESTful APIs.  
-- **JWT**: For user authentication.  
-- **Razorpay**: For payment gateway integration.
-- **MongoDB**: For storing information in database.
-
-### AI Integration  
-- **Google Gemini API**: For natural language understanding and AI-based movie search.  
-
-### Deployment  
-- **Vercel**: Frontend and backend deployment.  
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheHarshitBansal/AI-Movie-Recommendation-System/main/public/cover.png" alt="Project Preview" width="100%" />
+</p>
 
 ---
 
-## Contribution
+## ✨ Features
 
-Feel free to contribute to this project by:
-  1. Forking the repository.
-  2. Creating a new branch for your feature or bug fix.
-  3. Submitting a pull request.
+- 🧠 **AI-Powered Search** — Ask movie-related questions using **Google Gemini API** for smart, conversational suggestions  
+- 💸 **Integrated Payment Gateway** — Secure payment flows powered by **Razorpay** for subscriptions or premium access  
+- 🔐 **JWT Authentication** — Safely manage user sessions using **JSON Web Tokens**  
+- ⚛️ **State Management with Redux** — Clean, maintainable global state across the app  
+- 📱 **Fully Responsive UI** — Built with **TailwindCSS** and designed in **Figma**  
+- 🎭 **Rich Movie Database** — View cast, genre, release date, and ratings in detail  
+- 🌐 **Deployed APIs on Vercel** — Fast, scalable, and serverless-ready backend API hosting  
+- ⚡ **Vite Frontend** — Super-fast local dev environment using Vite  
+- 🧪 **Backend with Express.js** — RESTful APIs for auth and user operations  
+- 📦 **MongoDB** — Robust document-based database for storing user/movie data
 
-**Let’s revolutionize how we explore and enjoy movies!** 🎥
+---
 
+## 🛠️ Tech Stack
 
+<p align="center">
+  <img src="https://img.shields.io/badge/React-61DAFB?logo=react&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Redux-764ABC?logo=redux&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwindcss&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Figma-000000?logo=figma&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?logo=vite&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Node.js-339933?logo=node.js&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Express.js-000000?logo=express&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Razorpay-02042B?logo=razorpay&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Gemini%20AI-4285F4?logo=google&logoColor=white&style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&style=for-the-badge" />
+</p>
+
+---
+
+## 🚀 Getting Started
+
+### 🖥 Frontend (React + Vite)
+```bash
+cd frontend
+npm install
+npm run dev
