@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/TheHarshitBansal/AI-Movie-Recommendation-System/main/client/src/assets/Logo.svg" alt="AI Movie Recommendation System Logo" width="120" />
 </p>
 
-<h1 align="center">🎬 AI Movie\Show Recommendation System</h1>
+<h1 align="center">🎬 AI Movie/Show Recommendation System</h1>
 
 <p align="center">
   <b>Your AI-powered movie or show explorer — search, discover, and enjoy personalized recommendations!</b><br/>
